@@ -29,6 +29,12 @@ doppler-xattr-util clear <path to file>
 doppler-xattr-util is-changed <path to file>
 ```
 
+Building the CLI:
+
+1. Download the project zip (or clone this repo)
+2. Run `swift build -c release` from inside the project
+3. Your built CLI tool is available inside `.build/release`
+
 ## License
 
 [MIT](/LICENSE).
