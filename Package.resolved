@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-xattr",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brushedtype/swift-xattr",
+      "state" : {
+        "revision" : "aed9663012d2db89b87b011a7045ddff398322c6",
+        "version" : "0.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}
