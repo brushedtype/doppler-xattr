@@ -31,4 +31,4 @@ doppler-xattr-util is-changed <path to file>
 
 ## License
 
-TK.
+[MIT](/LICENSE).
