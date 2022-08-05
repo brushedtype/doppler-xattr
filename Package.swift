@@ -5,18 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "DopplerExtendedAttributes",
-    platforms: [
-        .macOS(.v10_11),
-    ],
     products: [
         .library(
             name: "DopplerExtendedAttributes",
             targets: ["DopplerExtendedAttributes"]
-        ),
-
-        .executable(
-            name: "doppler-xattr-util",
-            targets: ["doppler-xattr-util"]
         ),
     ],
     dependencies: [
@@ -29,9 +21,5 @@ let package = Package(
                 .product(name: "ExtendedAttributes", package: "swift-xattr"),
             ]
         ),
-        .executableTarget(
-            name: "doppler-xattr-util",
-            dependencies: ["DopplerExtendedAttributes"]
-        )
     ]
 )
