@@ -26,7 +26,7 @@ public func setDopplerMetadataChangedAttribute(for url: URL) throws {
 /// Remove the Doppler refresh xattr, marking a file as not needing a refresh
 ///
 /// Typically, metadata apps should not use this function. Doppler will call this function after reading
-/// metadata and updating it's internal database.
+/// metadata and updating its internal database.
 ///
 /// - Parameter url: The file URL for the file that should have the extended attribute removed from
 public func clearDopplerMetadataChangedAttribute(for url: URL) throws {
@@ -44,11 +44,11 @@ public func clearDopplerMetadataChangedAttribute(for url: URL) throws {
 public func isDopplerMetadataChangedAttributeSet(for url: URL) throws -> Bool {
     let data = try url.extendedAttributeData(rawAttributeName: DopplerRefreshMetadataExtendedAttributeName)
 
-    guard data.count == 2 else {
-        if data.isEmpty {
-            return false
-        }
+    if data.isEmpty {
+        return false
+    }
 
+    guard data.count == 2 else {
         throw DopplerExtendedAttributeError.unexpectedDataForAttribute
     }
 
